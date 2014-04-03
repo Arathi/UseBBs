@@ -2,6 +2,14 @@ Issue numbers (#x):
  * As of 1.0.14: see https://github.com/usebb/UseBB/issues/x
  * Before: see http://www.usebb.net/community/topic-x.html
 
+UseBBs 1.1.0 Changelog
+------------------------------
+
+- 添加强制设置数据库的字符集为utf8的配置项，默认开启
+- 现在安装时各表字符集是utf8，暂时不可设置
+- 添加了简体中文语言支持
+- 现在安装后默认的语言是简体中文
+
 UseBB 1.0.17 Changelog
 ------------------------------
 

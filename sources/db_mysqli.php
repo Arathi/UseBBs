@@ -105,6 +105,12 @@ class db {
 		//
 		if ( is_object($functions) && $functions->get_config('force_latin1_db', true) )
 			$this->query("SET NAMES latin1", true, false);
+
+		//
+		// Set transaction to utf8
+		//
+		if ( is_object($functions) && $functions->get_config('force_utf8_db', true) )
+			$this->query("SET NAMES utf8", true, false);
 		
 	}
 	
