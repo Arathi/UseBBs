@@ -21,74 +21,74 @@
 	along with UseBB; if not, write to the Free Software
 	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 -->
-<title>UseBB 1 Readme</title>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>UseBBs Readme</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
 <div id="wrapper">
 
-	<h1>UseBB 1 <em>Readme</em></h1>
+	<h1>UseBBs<em> Readme</em></h1>
 	<div id="content">
-		<p>Welcome to the UseBB 1 introduction document. This file gives some general information regarding UseBB, how to install/upgrade, etc.</p>
+		<p>欢迎进入UseBBs使用手册。 该文件给出了一些关于UseBBs的基本信息，以及安装/升级UseBBs的指南。</p>
 		<ul>
-			<li><a href="#install-usebb">Install UseBB 1</a></li>
-			<li><a href="#upgrade-usebb">Upgrade an existing UseBB</a></li>
-			<li><a href="#more-info">More information</a></li>
+			<li><a href="#install-usebb">安装UseBBs</a></li>
+			<li><a href="#upgrade-usebb">从旧版本UseBBs升级</a></li>
+			<li><a href="#more-info">更多信息</a></li>
 		</ul>
 		
-		<h2 id="install-usebb">Install UseBB 1</h2>
-		<p>Before you install UseBB 1, you have to make sure your host accords to the following system requirements.</p>
-		<h3>Minimum requirements</h3>
+		<h2 id="install-usebb">安装UseBBs</h2>
+		<p>在安装UseBBs之前，你应该先了解一下你的服务器是否能够安装UseBBs。</p>
+		<h3>最低要求</h3>
 		<ul>
-			<li>HTTP server supporting PHP (or CGI)</li>
-			<li>PHP version 4.3.0, including <code>session</code>, <code>PCRE</code> and <code>mysql</code> extensions</li>
-			<li>MySQL version 3.23</li>
+			<li>支持PHP(或CGI)的HTTP服务器</li>
+			<li>PHP 4.3.0, 包括 <code>session</code>, <code>PCRE</code> 与 <code>mysql</code> 等扩展</li>
+			<li>MySQL 3.23</li>
 		</ul>
 		
-		<h3>Recommended set-up</h3>
+		<h3>推荐安装环境</h3>
 		<ul>
-			<li>GNU/Linux operating system</li>
-			<li>Recent Apache HTTPD version, including <code>mod_rewrite</code></li>
-			<li>Recent PHP 5 version, including <code>session</code>, <code>PCRE</code>, <code>mysql(i)</code>, <code>zlib</code> and <code>curl</code> extensions</li>
-			<li>Recent MySQL version</li>
+			<li>GNU/Linux操作系统</li>
+			<li>最新版Apache HTTPD，包括 <code>mod_rewrite</code> 功能</li>
+			<li>最新版PHP 5，包括 <code>session</code>, <code>PCRE</code>, <code>mysql(i)</code>, <code>zlib</code> 与 <code>curl</code> 等扩展</li>
+			<li>最新版MySQL</li>
 		</ul>
-		<p>UseBB 1 supports PHP 5 upto the recent versions of 5.4, and was tested with MySQL versions up to MySQL 5.5.</p>
-		<p>UseBB was also confirmed to work with some other HTTP servers, such as Microsoft IIS, lighttpd and ABYSS. However, there is no guarantee the latest version still does.</p>
+		<p>UseBBs支持较新的PHP 5.4以及MySQL 5.5。</p>
+		<p>UseBBs也能在别的Web服务器，例如Microsoft IIS, lighttpd 以及 ABYSS。但是不能保证在这些Web服务器的低版本下仍然能正常工作。</p>
 				
-		<p class="important"><strong>Important:</strong> If you use <strong>MySQL 4.1 or higher</strong>, it is highly recommended to use a <strong><code>latin1</code> collation</strong> instead of a Unicode one. Should your host use Unicode as default database collation, please change this for your database using phpMyAdmin or a similar administration tool or contact your host <em>before</em> installing UseBB 1. In most cases though, no action will be necessary.</p>
+		<!-- <p class="important"><strong>Important:</strong> If you use <strong>MySQL 4.1 or higher</strong>, it is highly recommended to use a <strong><code>latin1</code> collation</strong> instead of a Unicode one. Should your host use Unicode as default database collation, please change this for your database using phpMyAdmin or a similar administration tool or contact your host <em>before</em> installing UseBB 1. In most cases though, no action will be necessary.</p> -->
 
-		<p>To install UseBB 1, you have two options.</p>
-		<p class="important"><strong>Note:</strong> You must choose <strong>only one</strong> of the following installation methods. You don't have to follow both lists of steps. If you don't know what to choose, perform the automatic installation.</p>
+		<p>要安装UseBBs，你有两种方式可选：</p>
+		<p class="important"><strong>注意:</strong> 你必须选择<strong>其中一种</strong>方式来安装。如果你不知道该选哪一种方式，那就用自动安装器。</p>
 		
-		<h3>Automatic installation</h3>
-		<p>The <strong>automatic installer</strong> is mostly the best and easiest method to install UseBB 1.</p>
+		<h3>自动安装</h3>
+		<p>使用 <strong>自动安装器</strong> 基本上就是最好最快的安装UseBBs的方式。</p>
 		<ol>
-			<li>Rename <code>config.php-dist</code> to <code>config.php</code>;</li>
-			<li>Upload/move all the files to their final destination online;</li>
-			<li><em>Optional:</em> <a href="http://en.wikipedia.org/wiki/Chmod">chmod</a> <code>config.php</code> so that it is writable by the webserver, this will able both the installer and UseBB's ACP to change settings;</li>
-			<li>Open the <a href="../install/index.php">installation wizard</a> in your web browser (located at <code>install/</code> &ndash; the previous link only works when reading this file after uploading).</li>
-			<li>Follow the instructions in the wizard.</li>
+			<li>将 <code>config.php-dist</code> 重命名为 <code>config.php</code>；</li>
+			<li>将所有文件上传到web服务器的指定目录下；</li>
+			<li><em>可选：</em> 使用<a href="http://en.wikipedia.org/wiki/Chmod">chmod</a>命令修改 <code>config.php</code> 文件的访问权限为可写，使得安装器和UseBB的ACP可以对其进行修改；</li>
+			<li>用你的浏览器打开 <a href="../install/index.php">安装向导</a>； </li>
+			<li>按照安装向导中的说明操作。</li>
 		</ol>
 		
-		<h3>Manual installation</h3>
-		<p>Alternatively, you can install UseBB 1 manually.</p>
+		<h3>手动安装</h3>
+		<p>当然，你也可以手动安装UseBBs。</p>
 		<ol>
-			<li>Execute <code>install/schemas/mysql.sql</code> followed by <code>install/usebb.sql</code> on your database (using a database management tool such as <a href="http://www.phpmyadmin.net/">phpMyAdmin</a>);</li>
-			<li>Rename <code>config.php-dist</code> to <code>config.php</code>;</li>
-			<li>Edit <code>config.php</code> and adjust the database settings<sup>1</sup>;</li>
-			<li>Upload/move all the files except for the <code>install</code> directory to their final destination online;</li>
-			<li><em>Optional:</em> <a href="http://en.wikipedia.org/wiki/Chmod">chmod</a> <code>config.php</code> so that it is writable by the webserver, this will able UseBB's ACP to change settings;</li>
-			<li>Register a first user, it will automatically be an administrator.</li>
+			<li>先后执行 <code>install/schemas/mysql.sql</code> 以及 <code>install/usebb.sql</code> 两个数据库脚本 （推荐使用数据库管理工具，例如 <a href="http://www.phpmyadmin.net/">phpMyAdmin</a>）；</li>
+			<li>将 <code>config.php-dist</code> 重命名为 <code>config.php</code>；</li>
+			<li>编辑 <code>config.php</code> 文件，调整一下数据库相关信息<sup>1</sup>；</li>
+			<li>上传除了 <code>install</code> 目录以外的所有文件到web服务器指定目录下；</li>
+			<li><em>可选：</em> 使用<a href="http://en.wikipedia.org/wiki/Chmod">chmod</a>命令修改 <code>config.php</code> 文件的访问权限为可写，使得UseBB的ACP可以对其进行修改；</li>
+			<li>注册第一个用户，它将自动被设置为管理员。</li>
 		</ol>
 
-		<p><sup>1</sup>Use type '<code>mysqli</code>' if you use PHP 5 and have the <code>mysqli</code> extension available.</p>
+		<p><sup>1</sup>如果你使用的PHP 5以上版本，并且<code>mysqli</code>扩展可用，可以将数据库类型设置为 '<code>mysqli</code>'。</p>
 
-		<h3>After installation</h3>
+		<h3>安装后</h3>
 
-		<p>When installation is done, you can log in and start configuring your forum. The link to the ACP (Admin Control Panel) is at the bottom of the page.</p>
-		<p>If this is a public forum, it is advised to <a href="anti-spam.html">read the <strong>anti-spam</strong> instructions</a> and take appropriate measures. By default no anti-spam features are enabled.</p>
-		
+		<p>安装完成后，你可以登陆管理员账号并开始配置论坛。ACP(管理员控制面板)的链接位于页面的底端。</p>
+		<p>如果您的论坛对外公开，建议<a href="anti-spam.html">阅读一下<strong>反垃圾</strong>指南</a>，并做相应的设置。默认情况下，反垃圾的功能均未开启。</p>
+		<!--
 		<h2 id="upgrade-usebb">Upgrade an existing UseBB</h2>
 		<p>If you run a forum powered by a previous UseBB 1.0 version, you can upgrade as following:</p>
 		<ul>
@@ -104,22 +104,22 @@
 		</ul>
 		<p>Separate download files can be found at <a href="http://www.usebb.net/downloads/">www.usebb.net/downloads</a>.</p>
 		<p>Upgrading from several (now really old) 0.x versions is not possible without making database changes. Ask for help at <a href="http://www.usebb.net/community/">the forums</a>.</p>
-		
-		<h2 id="more-info">More information</h2>
-		
+		-->
+		<h2 id="more-info">更多信息</h2>
+		<!--
 		<h3>Important note</h3>
 		<p>While there are <strong>Unicode</strong> patches applied to the source, Unicode remains officially unsupported in UseBB 1. Please use Unicode (UTF-8) based translations at your own risk.</p>
-
-		<h3>Developer's remark</h3>
-		<p>UseBB 1 and its beta versions 0.x were developed as a hobby project, partially to gain experience with PHP and web development. The first code was written in 2004.</p>
-		<p>Even though UseBB 1 has proven to be very suitable for small communities and is still maintained, its implementation should not be seen as a good example of the usage of modern (web) development techniques. For example, UseBB 1 lacks good use of object oriented programming and contains a number of design flaws that should be avoided in other (web) applications.</p>
-		<p>Consider UseBB 1 for what it is: a light and &ndash; most important &ndash; classic bulletin board system.</p>
+        -->
+		<h3>开发者注记</h3>
+		<p>UseBB 1 及其beta版本0.x是作为一个业余爱好项目来开发的，很大程度上只是为了提升PHP和MySQL的开发经验。此项目最先开始于2004年。</p>
+		<p>尽管UseBB 1 已被证实非常适用于小型社区，而且仍然在维护中，但在实现上并非一个良好的现代开发技术应用案例。例如，UseBB 1 缺乏面向对象思想，在设计上也有若干缺陷，其他网页应用程序的开发中应当尽量避免这些缺陷。</p>
+		<p>要记住UseBB的定位：轻量级的和——最重要的——经典的论坛系统。</p>
 		
-		<h3>External links</h3>
-		<p>If you would like more information about UseBB, check out the following locations.</p>
+		<h3>外部链接</h3>
+		<p>如果你想获取更多关于UseBB的信息，请访问以下链接。</p>
 		<ul>
-			<li><a href="http://www.usebb.net">UseBB.net</a> for general information, news, downloads, etc.</li>
-			<li>The <a href="http://www.usebb.net/community/">community forums</a> for help, discussion, etc.</li>
+			<li><a href="http://www.usebb.net">UseBB.net</a> UseBB官方网站</li>
+			<li><a href="http://www.usebb.net/community/">community forums</a> UseBB官方论坛</li>
 		</ul>
 	</div>
 
